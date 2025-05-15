@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://cch25oom6os11"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_pfxwd"]
+
+[node name="Control" type="Control"]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pfxwd")
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 130.0
+offset_right = 1072.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 120
+text = "Gravity Runner
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="HighScoreLabel" type="Label" parent="."]
+offset_left = 807.0
+offset_top = 38.0
+offset_right = 941.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 25
+text = "High score: 
+"
+
+[node name="1Player" type="Button" parent="."]
+offset_left = 77.0
+offset_top = 330.0
+offset_right = 491.0
+offset_bottom = 437.0
+text = "1 Player
+"
+
+[node name="2Player" type="Button" parent="."]
+offset_left = 644.0
+offset_top = 337.0
+offset_right = 1057.0
+offset_bottom = 435.0
+text = "2 Players
+"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 349.0
+offset_top = 485.0
+offset_right = 836.0
+offset_bottom = 586.0
+text = "Quit
+"

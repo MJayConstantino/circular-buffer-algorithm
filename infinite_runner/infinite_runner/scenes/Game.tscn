@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://ncn8xevye2yj"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ja0i3"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_ja0i3")
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1171.0
+offset_bottom = 646.0
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_right = 185.0
+offset_bottom = 78.0
+
+[node name="GameOverPanel" type="Control" parent="HUD"]
+visible = false
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 644.0
+
+[node name="GameOver" type="Label" parent="HUD/GameOverPanel"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 83.0
+offset_right = 845.0
+offset_bottom = 220.0
+theme_override_font_sizes/font_size = 100
+text = "Game Over
+"
+horizontal_alignment = 1
+
+[node name="FinalScore" type="Label" parent="HUD/GameOverPanel"]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 255.0
+offset_right = 661.0
+offset_bottom = 324.0
+theme_override_font_sizes/font_size = 50
+text = "Final Score:
+"
+
+[node name="RestartButton" type="Button" parent="HUD/GameOverPanel"]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 366.0
+offset_right = 719.0
+offset_bottom = 463.0
+text = "Restart Game
+"
+
+[node name="MainMenuButton" type="Button" parent="HUD/GameOverPanel"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 516.0
+offset_right = 717.0
+offset_bottom = 607.0
+text = "Return to Main Menu
+"
+
+[connection signal="pressed" from="HUD/GameOverPanel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="HUD/GameOverPanel/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
